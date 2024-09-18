@@ -1,0 +1,32 @@
+.social-icon {
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px !important;
+}
+b{
+    font-weight: 400;
+}
+.text-icons {
+    font-size: 1.5rem; /* تغيير حجم الأيقونات */
+    display: flex;
+    gap: 15px; /* المسافة بين الأيقونات */
+}
+
+.icon-link {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7); /* خلفية أغمق */
+    color: #ccc; /* لون النص */
+    transition: background-color 0.3s, transform 0.3s; /* تأثير الانتقال عند التمرير */
+}
+
+.icon-link:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* تغيير الخلفية إلى لون أغمق عند التمرير */
+    transform: scale(1.1); /* تكبير الأيقونة قليلاً عند التمرير */
+    color: #fff; /* تغيير لون النص عند التمرير */
+}

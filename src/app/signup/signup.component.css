@@ -1,0 +1,28 @@
+label{
+    font-size: 0.875rem !important;
+    font-weight: 550 !important;
+}
+input{
+    font-size: 0.875rem !important;
+    }
+#terms{
+        height: 12px;
+        width: 12px;
+        margin-right: 3px;
+        }
+
+      .invalid-feedback  {
+            font-size: 0.875rem !important;
+        }
+
+  p{ font-size: 0.875rem !important;
+    text-align: center;
+    
+       }
+       a.text-decoration-none.text-secondary:hover {
+        color: black !important;
+    }
+
+    ul li {
+        font-size: 0.875rem !important;
+    }

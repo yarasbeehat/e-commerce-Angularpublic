@@ -1,0 +1,30 @@
+label{
+    font-size: 0.875rem !important;
+    font-weight: bold !important;
+}
+input{
+    font-size: 0.875rem !important;
+    }
+    a.text-decoration-none.text-secondary:hover {
+        color: black !important;
+    }
+    
+                    
+    .modal{
+        size: 10%;
+    }
+    .modal-body{
+        margin: 10px;
+        font-size: 0.875rem !important;        
+    }
+    #a{
+        font-weight: 450 !important;
+    }
+    .modal-header{
+        margin: 10px;
+        font-size: 0.875rem !important;        
+    }
+    .modal-footer{
+        margin: 10px;
+        font-size: 0.875rem !important;        
+    }

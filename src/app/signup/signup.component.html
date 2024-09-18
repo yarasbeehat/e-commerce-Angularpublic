@@ -1,0 +1,109 @@
+<!-- Signup Page -->
+<div class="container py-5">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="text-center text-dark mb-4">Create Account</h3>
+                    <div class="col-md-12">
+
+                        <p >
+                            For a fast checkout, easy access to previous orders <br>
+                             and the ability to create an address book and store settings. Register below.
+                        </p>
+                        </div>
+                    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                       
+                            <div class="form-group mb-3">
+                            <!-- <label for="firstName" class="form-label">First Name</label> -->
+                            <input name="firstname" type="text" class="form-control" [class.is-invalid]="!user.firstName && isValidated"
+                            [(ngModel)]="user.firstName" id="firstName" placeholder="First Name" required>
+                            <div class="invalid-feedback">
+                                Please enter a first name
+                            </div>
+                        </div>
+                        
+                        
+                            <div class="form-group mb-3">
+                            <!-- <label for="lastName" class="form-label">Last Name</label> -->
+                            <input name="lastname" type="text" class="form-control" [class.is-invalid]="!user.lastName && isValidated"
+                            [(ngModel)]="user.lastName" id="lastName" placeholder="Last Name" required>
+                            <div class="invalid-feedback">
+                                Please enter a last name
+                            </div>
+                        </div>
+                    
+                        
+                            <div class="form-group mb-3">
+                            <!-- <label for="phoneNumber" class="form-label">Phone Number</label> -->
+                            <input name="phonenumber" type="text" class="form-control" [class.is-invalid]="!user.phoneNumber && isValidated"
+                            [(ngModel)]="user.phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+                            <div class="invalid-feedback">
+                                Please enter a phone number
+                            </div>
+                        </div>
+                 
+                        
+                            <div class="form-group mb-3">
+                            <!-- <label for="email" class="form-label">Email Address</label> -->
+                            <input name="email" type="email" class="form-control" [class.is-invalid]="!user.email && isValidated"
+                            [(ngModel)]="user.email" id="email" placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email
+                            </div>
+                        </div>
+                        <div *ngIf="userExists" class="alert alert-danger">
+                            User with this email already exists.
+                        </div>
+
+                     
+                    
+                        <!-- Password and Confirm Password -->
+<div class="row mb-3">
+    <div class="col-md-6">
+        <div class="form-group">
+            <input name="password" type="password" class="form-control" [class.is-invalid]="(!passwordHasMinLength || !passwordHasUppercase || !passwordHasLowercase || !passwordHasNumber || !passwordHasSpecialChar) && isValidated"
+            [(ngModel)]="user.password" id="password" placeholder="Password" required>
+            <div class="invalid-feedback">
+                <ul *ngIf="isValidated">
+                    <li *ngIf="!passwordHasMinLength">Password must be at least 8 characters long.</li>
+                    <li *ngIf="!passwordHasUppercase">Password must contain at least one uppercase letter.</li>
+                    <li *ngIf="!passwordHasLowercase">Password must contain at least one lowercase letter.</li>
+                    <li *ngIf="!passwordHasNumber">Password must contain at least one number.</li>
+                    <li *ngIf="!passwordHasSpecialChar">Password must contain at least one special character.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <input name="confirmPassword" type="password" class="form-control" [class.is-invalid]="!confirmPassword && isValidated || (confirmPassword !== user.password && isValidated)"
+            [(ngModel)]="confirmPassword" id="confirmPassword" placeholder="Confirm password" required>
+            <div class="invalid-feedback">
+                Password confirmation is required and must match the password.
+            </div>
+        </div>
+    </div>
+</div>
+
+                        <div class="mb-3">
+                            <input type="checkbox" id="terms" [(ngModel)]="isTermsChecked" name="terms" [class.is-invalid]="!isTermsChecked && isValidated">
+                            <label for="terms">I agree to the <a [routerLink]="'/termsandconditions'" class="text-decoration-none text-secondary">Terms & Conditions</a></label>
+                            <div class="invalid-feedback">
+                                Please accept the terms and conditions
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">REGISTER</button>
+                        </div>
+                    </form>
+                    <div class="mt-3 text-center">
+                        <a  [routerLink]="'/login'" class="text-decoration-none text-secondary">Already have an account?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
